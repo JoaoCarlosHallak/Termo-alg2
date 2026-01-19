@@ -6,7 +6,7 @@
 using namespace std;
 
 
-string generateSecret(){
+string secretGenerator(){
 
     ifstream file("static/out.txt");
 

@@ -6,7 +6,7 @@ using namespace std;
 int main(){
 
 
-    cout << generateSecret() << endl;
+    cout << secretGenerator() << endl;
 
     return 0;
 

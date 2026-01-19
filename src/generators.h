@@ -3,6 +3,6 @@
 #include <string>
 using namespace std;
 
-string generateSecret();
+string secretGenerator();
 
 #endif 
