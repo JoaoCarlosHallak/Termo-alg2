@@ -41,13 +41,14 @@ string menuGenerator() {
            "O computador escolheu uma palavra secreta\n"
            "com 6 letras.\n\n"
            "Regras do jogo:\n"
-           "- Você tem até 10 tentativas.\n"
-           "- Cada palpite deve ser uma palavra válida\n"
-           "  de 6 letras do dicionário.\n"
-           "- Palpites inválidos NÃO contam tentativa.\n\n"
+           "- Voce tem ate 10 tentativas.\n"
+           "- Cada palpite deve ser uma palavra valida\n"
+           "  de 6 letras do dicionario.\n"
+           "- Palpites invalidos NAO contam tentativa.\n\n"
            "Feedback:\n"
-           "- 'o'  -> letra correta na posição correta\n"
-           "- 'x'  -> letra correta na posição errada\n\n"
+           "- 'o'  -> letra correta na posicao correta\n"
+           "- 'x'  -> letra correta na posicao errada\n\n"
            "Boa sorte, decifrador!\n"
            "========================================\n";
 }
+
