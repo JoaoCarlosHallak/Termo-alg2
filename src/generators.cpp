@@ -1,53 +1,53 @@
 #include "generators.h"
-#include <string>
 #include <fstream>
 #include <iostream>
 #include <ctime>
+
 using namespace std;
 
 
-string secretGenerator(){
 
+
+
+char dictionary[50000][7];
+int totalWords = 0;
+
+void loadDictionary() {
     ifstream file("static/out.txt");
 
     if (!file.is_open()) {
         cout << "Failed to open file!" << endl;
-        return "";
+        return;
     }
 
-    char line[7];
-    int total = 0;
-
-    while(file.getline(line, 7)) {
-        total++;
+    while (file >> dictionary[totalWords]) {
+        totalWords++;
     }
-    file.clear();
-    file.seekg(0);
-
-    if (total == 0) {
-        cout << "No lines found in file!" << endl;
-        return "";
-    }
-
-    srand(time(NULL));
-    int randomIndex = rand() % total;
-
-
-    int currentIndex = 1;
-    string secret = "";
-
-    while(file.getline(line, 7)) {
-        if (currentIndex == randomIndex) {
-            cout << "Line selected: " << currentIndex << " String: " << line << endl;
-            secret = line;
-            break;
-        }
-        currentIndex++;
-    }
-
 
     file.close();
-    return secret;
 }
 
+string secretGenerator() {
+    srand(time(NULL));
+    int randomIndex = rand() % totalWords;
+    cout << "Line: " << randomIndex << endl;
+    return string(dictionary[randomIndex]);
+}
 
+string menuGenerator() {
+    return "========================================\n"
+           "        BEM-VINDO AO JOGO TERMO\n"
+           "========================================\n\n"
+           "O computador escolheu uma palavra secreta\n"
+           "com 6 letras.\n\n"
+           "Regras do jogo:\n"
+           "- Você tem até 10 tentativas.\n"
+           "- Cada palpite deve ser uma palavra válida\n"
+           "  de 6 letras do dicionário.\n"
+           "- Palpites inválidos NÃO contam tentativa.\n\n"
+           "Feedback:\n"
+           "- 'o'  -> letra correta na posição correta\n"
+           "- 'x'  -> letra correta na posição errada\n\n"
+           "Boa sorte, decifrador!\n"
+           "========================================\n";
+}

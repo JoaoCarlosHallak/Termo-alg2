@@ -1,12 +1,15 @@
 #include <iostream>
 #include "src/generators.h"
+#include "src/game.h"
 using namespace std;
+
+
 
 
 int main(){
 
+    start();
 
-    cout << secretGenerator() << endl;
 
     return 0;
 

@@ -9,12 +9,12 @@ int main() {
 
     if (!file.is_open() || !out.is_open()) {
         cout << "Failed to open file!" << endl;
-        return 1;
+        return 0;
     }
 
-    char line[100];
+    char line[13];
 
-    while (file.getline(line, 100)) {
+    while (file.getline(line, 13)) {
 
         int size = 0;
 

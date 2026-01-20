@@ -4,5 +4,6 @@
 using namespace std;
 
 string secretGenerator();
-
+void loadDictionary();
+string menuGenerator();
 #endif 
