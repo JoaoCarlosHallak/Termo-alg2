@@ -18,11 +18,11 @@ void start(){
 
 
     while(i <= 10){
-        cout << i << " Rodada" << endl;
-        cout << "Palpite >> ";
+        cout << i << " Round" << endl;
+        cout << "Guess >> ";
         cin >> guess;
         if (!checkerGuess(guess)){
-            cout << "Palpite inválido! Tente novamente." << endl;
+            cout << "Invalid guess! Try again." << endl;
             continue;
         }
 
